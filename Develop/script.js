@@ -1,35 +1,31 @@
 // Assignment Code
-var generateBtn = document.getElementById("#generate");
-const password_ele = document.getElementById("pwd-txt");
-var string = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
-const special_chars = "!@#$%^&*()";
-const generate = document.getElementById ("generate");
-const clipboard = document.getElementById ("clipboard");
-var pwd_length = document.getElementById ("")
+var generateBtn = document.querySelector("#generate"); //generate password button
 
 // Write password to the #password input
 function writePassword() {
-  var password = generatePassword();
-  var passwordText = document.querySelector("#password");
-  var passwordLength = 8;
+  var password = generatePassword(); // calling generate password function and storing value into 'password' var
+  var passwordText = document.querySelector("#password"); // generated password
+
+  passwordText.value = password; // takes value of generated password & plugs it into the screen
+
+}
+
+generateBtn.addEventListener("click".writePassword); // when user clicks the generate button, it will call the password function.
 
 
-  passwordText.value = password;
+/*
+function generateBtn {
+    document.getElementbyId = generatePassword();
 
+}
+
+  document.writePassword("password").value {
+
+
+}
   for (var i = 0; i <= passwordLength; i++) {
     var randomNumber = Math.floor(Math.random("#generate") * chars.length);
     password += chars.substring(randomNumber, randomNumber +1);
   
   }
-}
-
-function generateBtn {
-    document.getElementbyId = generatePassword();
-
-}
-/*
-  document.writePassword("password").value {
-
-
-}
 */
