@@ -1,13 +1,16 @@
 // Assignment Code
 var generateBtn = document.getElementById("#generate");
-
-
+const password_ele = document.getElementById("pwd-txt");
+var string = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+const special_chars = "!@#$%^&*()";
+const generate = document.getElementById ("generate");
+const clipboard = document.getElementById ("clipboard");
+var pwd_length = document.getElementById ("")
 
 // Write password to the #password input
 function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
-  var chars = "0123456789abcdefghijklmnopqrstuvwxyz!@#$%^&*()ABCDEFGHIJKLMNOPQRSTUVWXYZ"
   var passwordLength = 8;
 
 
