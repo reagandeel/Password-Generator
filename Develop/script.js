@@ -1,17 +1,14 @@
 // Assignment code here
 function generatePassword() {
   // Setting specifications for the password
-  const OPTIONS = {
-      lowerCaseArray : ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'],
-      upperCaseArray : ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'],
-      numArray : ['0','1','2','3','4','5','6','7','8','9'],
-      specialCharArray : ['!','@','#','$','*','&','[', ']', '(', ')','%', '>', '<', '+', '.', ':', ';','=','^','{', '}', ',','_' ], // !"#$%&'()*+,-./:;<=>?@[\]^_`{|}~
-  
-  };
-  var emptyArray =[''];
+      var lowerCaseArray = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'];
+      var upperCaseArray = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'];
+      var numArray = ['0','1','2','3','4','5','6','7','8','9'];
+      var specialCharArray = ['!','@','#','$','*','&','[', ']', '(', ')','%', '>', '<', '+', '.', ':', ';','=','^','{', '}', ',','_' ]; // !"#$%&'()*+,-./:;<=>?@[\]^_`{|}~
+      var emptyArray =[];
 
   // prompt - meets minimum and maxium character requirement (1-128 characters.)
-  passwordLength = prompt("How many characters would you like in your password? Please choose between 1 - 128 characters.");
+  passwordLength = prompt("How many characters would you like in your password? Please choose between 8 - 128 characters.");
     if (passwordLength < 8 && passwordLength > 128) {
       return "Please choose a number between 8-128.";
     } else if (isNaN(passwordLength)) {
@@ -48,24 +45,17 @@ function generatePassword() {
     // prompt - special character requirement.
   inputSpecialChar = confirm("Would you like for your password to contain special characters?");
     if (inputSpecialChar) {
-      var changeSpecialChar = alert ("Your password will contain special characters!");
+      var changeSpecialChar = alert("Your password will contain special characters!");
     } else {
       alert ("Your password will NOT contain special characters.");
     }
-    
-    if (inputLowerCase === false && inputUpperCase === false && inputNum === false && inputSpecialChar === false) {
-      return "Please select at least one character type.";
-    };
   
-    let endResult = ""
 
+  function endResult () {
     for (let i = 0; i < passwordLength; i++) {
-      let rng =[Math.floor(Math.random("#generate") * emptyArray.length)];
-      endResult = endResult + emptyArray.length;
-     }
-
-      return endResult;
-
+      return =[Math.floor(Math.random("#generate") * emptyArray.length)];
+      endResult = endResult + emptyArray.length[prng];
+  }
     };
 
   // sets function for generate password 
